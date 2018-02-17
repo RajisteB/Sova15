@@ -10,7 +10,9 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require jquery3
+//= require chartkick
+//= require jquery2
+//= require jquery_ujs
 //= require popper
 //= require bootstrap-sprockets
 //= require rails-ujs
@@ -22,34 +24,82 @@ let coinList = [];
 let subscription = [];
 
 $(document).ready(function() {
-    $.ajax({ url:"https://api.coinmarketcap.com/v1/ticker/?limit=15", success: function(result) {
+
+    // $.ajax({ url:"https://api.coinmarketcap.com/v1/ticker/?limit=15", success: function(result) {
         
-        result.forEach(x => {
-            if (x.symbol == 'MIOTA') {
-                x.symbol = 'IOT'
-                coinList.push(x.symbol);
-            } else {
-                coinList.push(x.symbol);
-            }
-        })
+    //     result.forEach(x => {
+    //         if (x.symbol == 'MIOTA') {
+    //             x.symbol = 'IOT'
+    //             coinList.push(x.symbol);
+    //         } else {
+    //             coinList.push(x.symbol);
+    //         }
+    //     })
 
-        coinList.forEach(sym => {
-            subscription.push(`5~CCCAGG~${sym}~USD`)
-        })
+    //     coinList.forEach(sym => {
+    //         subscription.push(`5~CCCAGG~${sym}~USD`)
+    //     })
 
-    }});
+    // }});
 
-    var currentPrice = {};
-    var socket = io.connect('https://streamer.cryptocompare.com/');
-    console.log(subscription);
-    socket.emit('SubAdd', { subs: subscription });
-    socket.on("m", function(message) {
-        var messageType = message.substring(0, message.indexOf("~"));
-        var res = [];
-        if (messageType == CCC.STATIC.TYPE.CURRENTAGG) {
-            res = CCC.CURRENT.unpack(message);
-            // console.log(res);
-        }
-    })
+    // var currentPrice = {};
+    // var socket = io.connect('https://streamer.cryptocompare.com/');
+    // console.log(subscription);
+    // socket.emit('SubAdd', { subs: subscription });
+    // socket.on("m", function(message) {
+    //     var messageType = message.substring(0, message.indexOf("~"));
+    //     var res = [];
+    //     if (messageType == CCC.STATIC.TYPE.CURRENTAGG) {
+    //         res = CCC.CURRENT.unpack(message);
+    //         // console.log(res);
+    //         var from = res['FROMSYMBOL'];
+    //         var to = res['TOSYMBOL'];
+    //         var fsym = CCC.STATIC.CURRENCY.getSymbol(from);
+    //         var tsym = CCC.STATIC.CURRENCY.getSymbol(to);
+    //         var pair = from + to;
+
+    //         if (!currentPrice.hasOwnProperty(pair)) {
+    //             currentPrice[pair] = {};
+    //         }
+
+    //         for (var key in res) {
+    //             currentPrice[pair][key] = res[key];
+    //         }
+
+    //         if (currentPrice[pair]['LASTTRADEID']) {
+    //             currentPrice[pair]['LASTTRADEID'] = parseInt(currentPrice[pair]['LASTTRADEID']).toFixed(0);
+    //         }
+    //         currentPrice[pair]['CHANGE24HOUR'] = CCC.convertValueToDisplay(tsym, (currentPrice[pair]['PRICE'] - currentPrice[pair]['OPEN24HOUR']));
+    //         currentPrice[pair]['CHANGE24HOURPCT'] = ((currentPrice[pair]['PRICE'] - currentPrice[pair]['OPEN24HOUR']) / currentPrice[pair]['OPEN24HOUR'] * 100).toFixed(2) + "%";;
+    //         // console.log(currentPrice[pair], from, tsym, fsym);
+
+    //         console.log(currentPrice[pair]);
+
+    //         if (res.PRICE === undefined) {
+    //             return
+    //         } else {
+
+    //             $(`#${currentPrice[pair].FROMSYMBOL}-PRICE`).text(`$${currentPrice[pair].PRICE.toLocaleString()}`);
+    //             $(`#${currentPrice[pair].FROMSYMBOL}-CHG`).text(`${currentPrice[pair].CHANGE24HOURPCT}`);
+    //         }
+
+    //         if (currentPrice[pair]['OPEN24HOUR'] > currentPrice[pair]['PRICE']) {
+    //             $(`#${currentPrice[pair].FROMSYMBOL}-CHG`).css('color', 'red');
+    //             $(`#${currentPrice[pair].FROMSYMBOL}-PRICE`).css('color', 'red');
+    //         } else {
+    //             $(`#${currentPrice[pair].FROMSYMBOL}-CHG`).css('color', 'green');
+    //             $(`#${currentPrice[pair].FROMSYMBOL}-PRICE`).css('color', 'green');
+    //         }
+    //     }
+    // })
+
+    $('#clock').countdown('2018/3/10', function (event) {
+        var $this = $(this).html(event.strftime(''
+            + '<span>%w</span> weeks '
+            + '<span>%d</span> days '
+            + '<span>%H</span> hr '
+            + '<span>%M</span> min '
+            + '<span>%S</span> sec'));
+    });
     
 })
