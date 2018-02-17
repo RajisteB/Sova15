@@ -47,6 +47,7 @@ gem 'bootstrap', '~> 4.0.0.beta3'
 gem 'cryptocompare'
 # httparty
 gem 'httparty', '~> 0.13.7'
+gem 'webpacker', '~> 3.2'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
