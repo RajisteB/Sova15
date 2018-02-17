@@ -17,7 +17,7 @@ class CryptoController < ApplicationController
         portfolio.each do |p|
             chartReturns[p["day"]] = (p["totalCash"] + 1000)
         end
-        @chart = chartReturns
+        @chart = chartReturns   
 
         @quotes = history
 
