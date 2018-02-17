@@ -16,6 +16,8 @@
 //= require popper
 //= require bootstrap-sprockets
 //= require rails-ujs
+//= require jsapi
+//= require chartkick
 //= require socket.io
 //= require turbolinks
 //= require_tree .
