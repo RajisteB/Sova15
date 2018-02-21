@@ -33,7 +33,7 @@ class CryptoController < ApplicationController
     end
 
     def landing
-        render file: Rails.public_path.join("landing.html"), layout: true
+        render file: Rails.public_path.join("landing.html")
     end
 
     
