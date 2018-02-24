@@ -36,5 +36,9 @@ class CryptoController < ApplicationController
         
     end
 
+    def subscribe
+        render "subscribe"
+    end
+
     
 end
