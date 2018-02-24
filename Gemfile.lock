@@ -256,6 +256,7 @@ DEPENDENCIES
   pg (~> 0.18)
   popper (~> 0.2.7)
   puma (~> 3.7)
+  rack
   rails (~> 5.1.4)
   sass-rails (~> 5.0)
   selenium-webdriver
