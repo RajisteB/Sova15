@@ -37,7 +37,7 @@ class CryptoController < ApplicationController
     end
 
     def subscribe
-        render "subscribe"
+        render "subscribe.html.haml"
     end
 
     
