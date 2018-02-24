@@ -98,7 +98,8 @@ html {
 
 .logo {
     background-image: image-url('SovaCrypto2.png');
-    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
     height: 100%;
     width: 48%;
 }
@@ -626,7 +627,7 @@ td {
     margin-bottom: 20px;
 }
 
-// **** RESPONSIVE - MEDIA QUERIES - LANDING PAGE ****
+// **** RESPONSIVE - MEDIA QUERIES - LANDING PAGE - MOBILE ****
 
 @media (min-width: 768px) {
     .landing {
@@ -657,6 +658,48 @@ td {
     }
     .landing_footer {
         height: 15vh;
+    }
+}
+
+// **** RESPONSIVE - MEDIA QUERIES - LANDING PAGE - DESKTOP/LAPTOP ****
+
+@media (min-width: 1025px) {
+    .coin_logo {
+        height: 60vh;
+        width: 60%;
+        background-size: contain;
+    }
+    .home {
+        display: flex;
+        width: 15%;
+    }
+    .home .logo {
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    .ico_attr {
+        height: 60vh;
+    }
+    .coming_soon {
+        height: 60vh;
+    }
+    .coming_soon p {
+        width: 50%;
+        font-size: 20px;
+    }
+    .landing_headline  h6{
+        font-size: 20px;
+    }
+    .ico_p {
+        font-size: 20px;
+    }
+    .flex_footer {
+        display: flex;
+        width: 40%;
+        margin: 0 auto;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 5px;
     }
 }
 

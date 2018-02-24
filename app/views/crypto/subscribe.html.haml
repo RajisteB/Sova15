@@ -1,3 +1,6 @@
+<script async>(function(s,u,m,o,j,v){j=u.createElement(m);v=u.getElementsByTagName(m)[0];j.async=1;j.src=o;j.dataset.sumoSiteId='949b394a07f6207cb8a8e88ba7e0c7fc01d277389c6e6f7d949de7f7723daefd';v.parentNode.insertBefore(j,v)})(window,document,'script','//load.sumo.com/');</script>
+%h2
+    = content_for(:title, "Subscribe")
 %nav.navbar.fixed-top.navbar-custom.navbar-expand-lg
     %a.navbar-brand{:href => "/", :class => "home"}
         %div{:class => "logo"}
@@ -52,9 +55,10 @@
                 %i{:class => "fas fa-paperclip", :style => "color: black"} 
                 WhitePaper
     .landing_footer
-        All rights reserved Copyright © 2018 SovaCrypto
-        %a{:href=> "https://twitter.com/share", :class => "btn btn-outline-light btn-lg"}
-            %i{:class => "fab fa-twitter fa-lg"}
-            Share on Twitter!
-        .fb-share-button{"data-href" => "http://www.sovacrypto.com/landing", "data-layout" => "button_count", "data-mobile-iframe" => "true", "data-size" => "large"}
-            %a.fb-xfbml-parse-ignore{:href => "https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.sovacrypto.com%2Flanding&src=sdkpreparse", :target => "_blank"} Share
+        .flex_footer
+            All rights reserved Copyright © 2018 SovaCrypto
+            %a{:href=> "https://twitter.com/share", :class => "btn btn-primary btn-sm"}
+                %i{:class => "fab fa-twitter fa-lg"}
+                Share on Twitter!
+            .fb-share-button{"data-href" => "http://www.sovacrypto.com/landing", "data-layout" => "button_count", "data-mobile-iframe" => "true", "data-size" => "large"}
+                %a.fb-xfbml-parse-ignore{:href => "https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.sovacrypto.com%2Flanding&src=sdkpreparse", :target => "_blank"} Share
