@@ -17,6 +17,12 @@
 @import "bootstrap";
 @import url('https://fonts.googleapis.com/css?family=Oswald:300,400,600');
 
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 html {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -27,7 +33,6 @@ html {
   -moz-box-sizing: inherit;
   box-sizing: inherit;
   }
-
 
 * {
     font-family: 'Oswald', sans-serif;
@@ -42,14 +47,13 @@ html {
 }
 
 .jumbotron {
-    height: 380px;
-    background-size: 100% 100%;
+    height: 40vh;
     background-repeat: no-repeat;
     border-radius: 0;
-    margin-top: -2px;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    justify-content: space space-between;
+    border: 2px solid yellow;
     background: #8E0E00;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #1F1C18, #8E0E00);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #1F1C18, #8E0E00); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
@@ -59,7 +63,7 @@ html {
 
 
 .jumbotron-links {
-    margin-top: 30px;
+    margin-top: 20vh;
     display: flex;
     justify-content: space-around;
     width: 40%;
@@ -68,6 +72,20 @@ html {
 
 .navbar-custom {
     background-color: #fff;
+}
+
+.navbar {
+    display: flex;
+    border: 2px solid red;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 11vh;
+}
+
+#navbarNav {
+    display: flex;
+    border: 2px solid blue;
 }
 
 #navbarNav a {
@@ -88,7 +106,10 @@ html {
     width: 48%;
     padding-top: 8px;
     text-align: center;
-    font-size: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 65px;
     color: darkred;
 }
 
@@ -492,6 +513,11 @@ td {
     text-align: center;
 } 
 
+#chart-3 {
+    height: 100%;
+    width: 100%;
+}
+
 .struct {
     font-weight: bold;
 }
@@ -706,6 +732,9 @@ td {
 
 // **** RESPONSIVE - MEDIA QUERIES ****
 @media (max-width: 500px) {
+    .navbar {
+        justify-content: space-between;
+    }
     .jumbotron-content {
         margin-top: 30%;
         flex-direction: column;
@@ -754,4 +783,102 @@ td {
     }
 }
 
+// **** RESPONSIVE - MEDIA QUERIES - IPAD / IPAD PRO ****
 
+@media (min-width: 768px) {
+    .jumbotron-content h1 {
+        font-size: 50px;
+    }
+    #clock {
+        font-size: 40px;
+    }
+
+    .history .content {
+        width: 75%;
+    }
+
+    #chart-3 {
+        width: 100%;
+    }
+
+    .chart_one {
+        width: 80vw;
+        height: 30vh;
+    }
+
+    .sym {
+        font-size: 50px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .jumbotron-content h1 {
+        font-size: 60px;
+    }
+    .jumbotron-content {
+        margin-top: 20px;
+    }
+    .jumbotron {
+        height: 35vh;
+    }
+}
+
+// **** RESPONSIVE - MEDIA QUERIES - IPHONE X ****
+
+@media (min-width: 300px) and (max-width: 499px) {
+    #navbarNav a {
+        font-size: 15px;
+    }
+    
+    #navbarNav {
+        width: 50%;
+        margin-right: 5px;
+    }
+
+    .sym {
+        font-size: 20px;
+    }
+
+    .jumbotron-content h1 {
+        font-size: 50px;
+    }
+
+    .jumbotron {
+        height: 100vh;
+    }
+
+    .lead_text a {
+        font-size: 15px;
+    }
+
+    .jumbotron-links .fa-lg {
+        height: 20px;
+        width: 20px;
+    }
+
+    .jumbotron-links {
+        width: 80%;
+        margin: 0 auto;
+        margin-top: 25%;
+    }
+
+    .currencies {
+        display: none;
+    }
+
+    .content {
+        width: 90%;
+    }
+
+    .content h1 {
+        font-size: 50px;
+    }
+
+    .content .btn {
+        margin: 0 auto;
+    }
+
+    .dist_chart {
+        display: none;
+    }
+}

@@ -44,7 +44,7 @@
         %br
         .dist_chart
             .chart_one
-                = pie_chart({"Assets" => 90, "Cash" => 8, "Operations" => 2}, height: "100%", width: "110%", library: {slices: {1 => {offset: 0.2}, 2 => {offset: 0.4}}, is3D: true, colors: ['#4183D7' ,'#03C9A9', '#C5EFF7'], legend: {position: 'labeled'}, pieSliceText: 'none'})
+                = pie_chart({"Assets" => 90, "Cash" => 8, "Operations" => 2}, library: {slices: {1 => {offset: 0.2}, 2 => {offset: 0.4}}, is3D: true, colors: ['#4183D7' ,'#03C9A9', '#C5EFF7'], legend: {position: 'labeled'}, pieSliceText: 'none'})
         %br
         %p 
             %span{:class => "struct"} ICO Fund Utilization: 
