@@ -47,7 +47,7 @@ html {
 }
 
 .jumbotron {
-    height: 40vh;
+    height: 50vh;
     background-repeat: no-repeat;
     border-radius: 0;
     display: flex;
@@ -816,7 +816,13 @@ td {
         margin-top: 20px;
     }
     .jumbotron {
-        height: 35vh;
+        height: 40vh;
+    }
+}
+
+@media (min-width: 1200px) {
+    #navbarNav {
+        display: flex;
     }
 }
 
