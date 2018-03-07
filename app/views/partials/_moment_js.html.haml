@@ -1,0 +1,10 @@
+:javascript
+  var post = document.getElementsByClassName('moment');
+  let timeline = [];
+  console.log(post);
+  console.log(typeof post)
+  for (var i = 0; i < post.length; i++) {
+    let time = post[i].innerText;
+    let trueMoment = moment(time).fromNow();
+    post[i].innerText = trueMoment;
+  }

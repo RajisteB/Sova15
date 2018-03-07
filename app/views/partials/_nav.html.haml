@@ -5,9 +5,13 @@
             .sym_container
                 SC<span>XV</span>
     #navbarNav
-        %a.nav-link{:href => "#"}
-            About
-        %a.nav-link{:href => "#"}
-            Sign-Up
-        %a.nav-link{:href => "#"}
-            Contact Us
+        %button.sign-up-btn
+            %a.nav-link#sign-up{:href => new_user_registration_path}
+                Signup
+        %a.nav-link.dashboard#login{:href => new_user_session_path}
+            %div.nav-icon
+                Login
+        %a.nav-link.dashboard#dashboard{:href => "/dashboard"}
+            %div.nav-icon 
+                Dashboard
+        

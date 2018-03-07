@@ -1,0 +1,19 @@
+:javascript
+    var open = false;
+
+    $('.fold').click(() => {
+        open = !open;
+        if (open) {
+            $('body').animate({'backgroundColor': 'blue'}, 'slow');
+            console.log("open is true.");
+            console.log("running if open conditional.");
+
+        } else {
+            console.log("open is false");
+            $('body').css('background', 'white');
+        }
+    })
+
+    $('html').click(()=> {
+      console.log("you clicked the body!");
+    });
