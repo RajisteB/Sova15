@@ -13,12 +13,12 @@ class DashboardController < ApplicationController
                 a["articles"].each do |b|
                     articles.push(b)
                 end
-            topNews = articles[0, 12]
+            topNews = articles[0..8]
             end
             return topNews
         end
         @stories = aggNews()
-    
+        puts @stories
     
     end
 end

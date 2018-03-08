@@ -17,10 +17,27 @@
   box-sizing: border-box;
 }
 
+$eightpctwhite: rgba(250,250,250,0.8);
+$sixpctwhite: rgba(250,250,250,0.6);
+$eightpctblack: rgba(0,0,0,0.8);
+$sixpctblack: rgba(0,0,0,0.8);
+$bgsidebar: #2E303A;
+$bgsidebaractivelink: #3B485F;
 $bgdefault: #c0392b;
+$bgdash: #161D31;
+$bgdashcardheader: #202941;
+$bgdashcardcontent: #26314C;
+$textsidenav: #f5f6fa;
 $bodyfont: 'Oswald', sans-serif;
+$bordernews1: #EAB543;
+$bordernews2: #9AECDB;
+$phone-upper-boundary: 600px;
+$tablet-portrait-upper-boundary: 900px;
+$tablet-landscape-upper-boundary: 1000px;
+$desktop-upper-boundary: 1800px;
 
-html {
+html, body {
+    background: $bgsidebar;
     font-family: $bodyfont;
 }
 
@@ -34,7 +51,8 @@ html {
 }
 
 .navbar-dark {
-    height: 100%;
+    height: 10%;
+    z-index: 4;
 }
 
 .navbar > button {
@@ -42,73 +60,98 @@ html {
     cursor: pointer;
 }
 
+.navbar {
+    z-index: 3;
+}
 
 // ***** SIDE NAVIGATION BAR ***** //
 // ***** SIDE NAVIGATION BAR ***** //
 // ***** SIDE NAVIGATION BAR ***** //
 // ***** SIDE NAVIGATION BAR ***** //
+
+.sidebar-header {
+    border: 0.5px solid $sixpctwhite;
+}
 
 .sideNav {
     height: 100%;
-    width: 0%;
-    position: absolute;
+    width: 18%;
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: rgba(0, 0, 0, 0.85);
+    background-color: $bgsidebar;
     overflow-x: hidden;
-    padding-top: 20px;
+    position: fixed;
+    padding-top: 8px;
     display: flex;
+    align-content: flex-start;
     flex-direction: column;
+    -webkit-transition: width 1s;
+    transition: width 1s;
+    z-index: 2;
+    font-weight: 400;
+    box-shadow: 3px 0px 1px 3px rgba(0,0,0,0.16);
 }
 
 .sideNav a {
-    text-decoration: none;
-    color: white;
+    text-decoration: none; 
+    color: $sixpctwhite;
     display: flex;
-    justify-content: center;
-    padding: 6% 0 5% 0;
-    border-bottom: 0.5px solid red;
-    font-size: 1.5em;
+    font-size: 1em;
 }
 
-.exit button {
-    font-size: 2.5em;
-    border-bottom: none;
-    width: 10%;
-    height: 100%;
-    display: flex;
-    border: none;
-    cursor: pointer;
-    justify-content: center;
+.sideNav-title {
+    text-align: center;
+    color: $eightpctblack;
+    background: tomato;
+    padding: 3px;
+    border-bottom: 0.3px solid $sixpctwhite;
 }
 
-.exit {
-    background: black;
-    height: 100%;
-    display: flex;
-    justify-content: flex-end;
-    padding: 0;
-    margin: 0;
+.sideNav h6 {
+    padding-left: 3%;
+    color: $sixpctwhite;
+    font-weight: 300;
 }
 
-.sideNav a:nth-child(2) {
-    border-top: 0.5px solid red;
+#sideNav > h6:nth-child(6) {
+    margin-top: 25%;
+}
+
+.link-wrapper {
+    display: flex;
+    width: 90%;
+    justify-content: space-around;
+    align-items: center;
+    padding: 8px 0 8px 0;
+}
+
+.link-wrapper > .link-icon {
+    width: 25%;
+    text-align: center;
+}
+
+.link-wrapper > .sidebar-text {
+    font-size: 1.2em;
+    width: 75%;
 }
 
 .sideNav a:hover {
-    background: black;
-
+    background: tomato;
+    color: $eightpctblack;
+    font-style: bold;
 }
 
-@media (max-width: 800px) {
-    sideNav a {
-        justify-content: flex-start;
-        text-align: left;
-        margin-left: 5px;
+.active {
+    background: $bgsidebaractivelink;
+    border-left: 3px solid tomato;
+
+    .sidebar-text h8 {
+        color: rgba(250,250,250,0.9);
+        font-weight: 500;
     }
 
-    .exit button {
-        width: 30%;
+    .link-icon {
+        color: tomato;
     }
 }
