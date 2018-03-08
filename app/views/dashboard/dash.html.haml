@@ -1,18 +1,16 @@
 = stylesheet_link_tag    'dashboard', media: 'screen', 'data-turbolinks-track': 'reload'
-
-= render 'partials/dashboard_navigation'
 = render 'partials/sidebar_toggle_script'
+= render 'partials/dashboard_navigation'
 
-#navbarToggleExternalContent.collapse
-    .sidenav
-        %a{:href => '#'} Link 1
-        %a{:href => '#'} Link 2
-        %a{:href => '#'} Link 3
-        %a{:href => '#'} Link 4
-
-
-
-
+.sideNav#sideNav
+    .closebtn
+        .exit 
+            %button{:onclick => "closeSideNav()"}
+                X
+    %a{:href => '#'} Markets
+    %a{:href => '#'} SovaCrypto
+    %a{:href => '#'} Crypto News
+    %a{:href => '#'} My Account
 
 
 

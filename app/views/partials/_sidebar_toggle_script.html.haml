@@ -1,19 +1,8 @@
 :javascript
-    var open = false;
+    function openSideNav() {
+        document.getElementById("sideNav").style.width = "35%";
+    }
 
-    $('.fold').click(() => {
-        open = !open;
-        if (open) {
-            $('body').animate({'backgroundColor': 'blue'}, 'slow');
-            console.log("open is true.");
-            console.log("running if open conditional.");
-
-        } else {
-            console.log("open is false");
-            $('body').css('background', 'white');
-        }
-    })
-
-    $('html').click(()=> {
-      console.log("you clicked the body!");
-    });
+    function closeSideNav() {
+        document.getElementById("sideNav").style.width = "0";
+    }

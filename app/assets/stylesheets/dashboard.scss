@@ -7,6 +7,9 @@
 
 
 // ***** DEFAULTS ***** //
+// ***** DEFAULTS ***** //
+// ***** DEFAULTS ***** //
+// ***** DEFAULTS ***** //
 
 *, *:before, *:after {
   -moz-box-sizing: border-box;
@@ -21,60 +24,91 @@ html {
     font-family: $bodyfont;
 }
 
-body {
-    margin-top: 4%;
-}
-
-
+// ***** NAVIGATION BAR ***** //
+// ***** NAVIGATION BAR ***** //
+// ***** NAVIGATION BAR ***** //
 // ***** NAVIGATION BAR ***** //
 
-.navbar {
-    height: 6%;
-    background-color: $bgdefault;
+.navbar, .navbar-toggler-icon, button {
+    background: $bgdefault;
+}
+
+.navbar-dark {
+    height: 100%;
+}
+
+.navbar > button {
+    border: none;
+    cursor: pointer;
 }
 
 
 // ***** SIDE NAVIGATION BAR ***** //
+// ***** SIDE NAVIGATION BAR ***** //
+// ***** SIDE NAVIGATION BAR ***** //
+// ***** SIDE NAVIGATION BAR ***** //
 
-.sidenav {
+.sideNav {
     height: 100%;
-    width: 200px;
+    width: 0%;
     position: absolute;
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.85);
     overflow-x: hidden;
     padding-top: 20px;
+    display: flex;
+    flex-direction: column;
 }
 
-.dimmed {
-    body {
-        background-color: grey;
-    }
-}
-// ***** CONTENT CONTAINER ***** //
-
-// .content-container > .container {
-//     border: 2px solid blue;
-//     min-height: 86vh;
-//     max-width: 100%;
-// }
-
-
-// ***** FOOTER ***** //
-
-.footer {
-    position: fixed;
-    bottom: 0;
-    height: 20px;
-    background: rgba(0, 0, 0, 0.8);
+.sideNav a {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    justify-content: center;
+    padding: 6% 0 5% 0;
+    border-bottom: 0.5px solid red;
+    font-size: 1.5em;
 }
 
-.footer > .container {
+.exit button {
+    font-size: 2.5em;
+    border-bottom: none;
+    width: 10%;
     height: 100%;
+    display: flex;
+    border: none;
+    cursor: pointer;
+    justify-content: center;
 }
 
-.text-muted {
-    font-size: 8pt;
+.exit {
+    background: black;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 0;
+    margin: 0;
+}
+
+.sideNav a:nth-child(2) {
+    border-top: 0.5px solid red;
+}
+
+.sideNav a:hover {
+    background: black;
+
+}
+
+@media (max-width: 800px) {
+    sideNav a {
+        justify-content: flex-start;
+        text-align: left;
+        margin-left: 5px;
+    }
+
+    .exit button {
+        width: 30%;
+    }
 }
