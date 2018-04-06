@@ -2,13 +2,14 @@
   window.addEventListener('load', () => {
     var utcTime = document.getElementsByClassName('time');
     console.log(utcTime);
-    console.log(typeof utcTime);
     for (var i = 0; i < utcTime.length; i++) {
       var timePosted = utcTime[i].innerText;
-      console.log(timePosted);
-      var timeago = moment(timePosted).fromNow();
-      console.log(timeago);
-      document.getElementById(`${timePosted}`).innerText = timeago;
+      var timeAry = timePosted.split(' ');
+      timeAry[2] = "UTC";
+      var instance = timeAry.join(' ');
+      var timeAgo = moment(instance).fromNow();
+      console.log(timeAgo);
+      document.getElementById(`${timePosted}`).innerText = timeAgo;
     }
   })
 

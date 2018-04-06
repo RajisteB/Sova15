@@ -1,3 +1,5 @@
+= stylesheet_link_tag    'crypto', media: 'screen', 'data-turbolinks-track': 'reload'
+
 .currencies
     %table{:class => ["table", "toptable", "table-hover", "table-sm", "table-dark"]}
         %caption
@@ -10,8 +12,6 @@
                     Symbol
                 %th{:scope=> "col"}
                     Name
-                %th{:scope=> "col"}
-                    MktCap
                 %th{:scope=> "col"}
                     Price
                 %th{:scope=> "col"}
@@ -29,11 +29,9 @@
                         = c["symbol"]
                     %td
                         = c["name"]
-                    %td
-                        = c["market_cap_usd"]
                     %td{:id => "#{c["symbol"]}-PRICE"}
                         = "$ #{c["price_usd"]}"
                     %td{:id => "#{c["symbol"]}-CHG"}
                         = "#{c["percent_change_24h"]}%"
                     %td
-                        6.00%
+                        6%

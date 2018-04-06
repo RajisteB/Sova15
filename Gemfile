@@ -22,6 +22,12 @@ gem 'uglifier', '>= 1.3.0'
 gem 'jquery-color', '~> 2.1', '>= 2.1.2'
 # Devise
 gem 'devise'
+# Guard
+gem 'guard'
+# Guard LiveReload
+gem 'guard-livereload', '~> 2.5', require: false
+# Google Charts
+gem 'googlecharts', '~> 1.6', '>= 1.6.12', :require => "gchart"
 # Moment.js
 gem 'momentjs-rails'
 # Use CoffeeScript for .coffee assets and views
@@ -34,6 +40,8 @@ gem 'jbuilder', '~> 2.5'
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
+# timecircles - jquery plugin
+gem 'rails-assets-timecircles', source: 'https://rails-assets.org'
 # chartkick
 gem 'chartkick'
 # popper
