@@ -1,17 +1,44 @@
-%nav.navbar.fixed-top.navbar-custom.navbar-expand-lg
-    %a.navbar-brand{:href => "#", :class => "home"}
-        %div{:class => "logo"}
-        %div{:class => "sym"}
-            .sym_container
-                SC<span>XV</span>
-    #navbarNav
-        %button.sign-up-btn
-            %a.nav-link#sign-up{:href => new_user_registration_path}
-                Signup
-        %a.nav-link.dashboard#login{:href => new_user_session_path}
-            %div.nav-icon
-                Login
-        %a.nav-link.dashboard#dashboard{:href => "/dashboard"}
-            %div.nav-icon 
-                Dashboard
-        
+.topnav
+    .topnav-elem
+        %i.far.fa-envelope.fa-lg.icon
+        %p info@sovacrypto.com
+    .topnav-elem
+        %a{:href => "https://www.facebook.com/Sova-Crypto-2025423687741315/", :target=> "blank"}
+            %i.fab.fa-facebook-square.fa-lg.icon
+        %a{:href => "https://twitter.com/sovacrypto", :target=> "blank"}
+            %i.fab.fa-twitter-square.fa-lg.icon
+        %a{:href => "https://www.instagram.com/sovacrypto/", :target=> "blank"}
+            %i.fab.fa-instagram.fa-lg.icon
+        %a{:href => "https://www.linkedin.com/in/sova-crypto-724717158/", :target=> "blank"}
+            %i.fab.fa-linkedin.fa-lg.icon
+        %a{:href => "https://www.youtube.com/channel/UCcfUa0tQJwN7UILoMuX62-A", :target=> "blank"}
+            %i.fab.fa-youtube.fa-lg.icon
+%nav.navbar.navbar-expand-md.navbar-light
+    %a.navbar-brand{:href => "/"} 
+        = image_tag 'SovaCrypto2.png'
+        %h2 SovaCrypto
+    %button.navbar-toggler{"aria-controls" => "navbars-md-collapse", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#navbars-md-collapse", "data-toggle" => "collapse", :type => "button"}
+        %span.navbar-toggler-icon
+    #navbars-md-collapse.collapse.navbar-collapse
+        %ul.navbar-nav.ml-auto
+            %li.nav-item.active
+                %a.nav-link{:href=>"/"}
+                    Home
+                    %span.sr-only
+                        (current)
+            %li.nav-item
+                %a.nav-link{:href=>"#about"}
+                    About
+            %li.nav-item
+                %a.nav-link{:href=>"#"}
+                    Blog
+            %li.nav-item
+                %a.nav-link{:href=>"/register"}
+                    Dashboard
+            %li.nav-item.dropdown
+            %br
+            %button{:type => "button", :class => "nav-btn"}
+                = link_to('Login', register_path)
+            %br
+            %button{:type => "button", :class => "nav-btn"}
+                = link_to('Register', register_path)

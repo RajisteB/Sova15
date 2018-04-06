@@ -138,12 +138,16 @@ $clouds: #ECF0F1;
 }
 
 
-ul.navbar-nav button {
+ul.navbar-nav .nav-btn {
     margin: 0px 10px 0px 10px;
     border-radius: 3px;
     background: $gold;
-    color: $navy;
     letter-spacing: 2px;
+
+    a {
+        color: $navy;
+        text-decoration: none;
+    }
 }
 
 // BANNER 

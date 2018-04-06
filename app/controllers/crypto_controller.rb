@@ -32,12 +32,8 @@ class CryptoController < ApplicationController
 
     end
 
-    def landing
+    def register
         
-    end
-
-    def subscribe
-        render "subscribe.html.haml"
     end
 
     def homepage

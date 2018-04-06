@@ -18,13 +18,18 @@
 //= require moment
 //= require rails-ujs
 //= require socket.io
-//= require turbolinks
 //= require_tree .
+//= require turbolinks
+
+
+
 
 let coinList = [];
 let subscription = [];
 
 $(document).ready(function() {
+
+    // SOCKETIO LIVE PRICES
 
     $.ajax({ url:"https://api.coinmarketcap.com/v1/ticker/?limit=15", success: function(result) {
         
@@ -94,6 +99,8 @@ $(document).ready(function() {
         }
     })
 
+    // COUNTDOWN CLOCK
+
     $('#clock').countdown('2018/4/15', function (event) {
         var $this = $(this).html(event.strftime(''
             + '<div class="timing" style="display: inline-block"><span>%w</span> <br> wks <br> </div>'
@@ -102,5 +109,16 @@ $(document).ready(function() {
             + '<div class="timing" style="display: inline-block"><span>%M</span> <br> min <br></div> '
             + '<div class="timing" style="display: inline-block"><span>%S</span> <br> sec <br></div>'));
     });
-    
-})
+
+
+    // SMOOTH SCROLL
+
+   $('a[href*=\\#]').on('click', function (e) {
+        e.preventDefault();
+        $('html,body').animate({
+            scrollTop: $(this.hash).offset().top
+        }, 500);
+    });
+
+
+});

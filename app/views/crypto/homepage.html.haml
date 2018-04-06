@@ -1,49 +1,6 @@
 = stylesheet_link_tag    'crypto', media: 'screen', 'data-turbolinks-track': 'reload'
 <script async>(function(s,u,m,o,j,v){j=u.createElement(m);v=u.getElementsByTagName(m)[0];j.async=1;j.src=o;j.dataset.sumoSiteId='949b394a07f6207cb8a8e88ba7e0c7fc01d277389c6e6f7d949de7f7723daefd';v.parentNode.insertBefore(j,v)})(window,document,'script','//load.sumo.com/');</script>
-.topnav
-    .topnav-elem
-        %i.far.fa-envelope.fa-lg.icon
-        %p info@sovacrypto.com
-    .topnav-elem
-        %a{:href => "https://www.facebook.com/Sova-Crypto-2025423687741315/"}
-            %i.fab.fa-facebook-square.fa-lg.icon
-        %a{:href => "https://twitter.com/sovacrypto"}
-            %i.fab.fa-twitter-square.fa-lg.icon
-        %a{:href => "https://www.instagram.com/sovacrypto/"}
-            %i.fab.fa-instagram.fa-lg.icon
-        %a{:href => "https://www.linkedin.com/in/sova-crypto-724717158/"}
-            %i.fab.fa-linkedin.fa-lg.icon
-        %a{:href => "https://www.youtube.com/channel/UCcfUa0tQJwN7UILoMuX62-A"}
-            %i.fab.fa-youtube.fa-lg.icon
-%nav.navbar.navbar-expand-md.navbar-light
-    %a.navbar-brand{:href => "#"} 
-        = image_tag 'SovaCrypto2.png'
-        %h2 SovaCrypto
-    %button.navbar-toggler{"aria-controls" => "navbars-md-collapse", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#navbars-md-collapse", "data-toggle" => "collapse", :type => "button"}
-        %span.navbar-toggler-icon
-    #navbars-md-collapse.collapse.navbar-collapse
-        %ul.navbar-nav.ml-auto
-            %li.nav-item.active
-                %a.nav-link{:href=>"#"}
-                    Home
-                    %span.sr-only
-                        (current)
-            %li.nav-item
-                %a.nav-link{:href=>"#"}
-                    About
-            %li.nav-item
-                %a.nav-link{:href=>"#"}
-                    Blog
-            %li.nav-item
-                %a.nav-link{:href=>"#"}
-                    Dashboard
-            %li.nav-item.dropdown
-            %br
-            %button{:href=>"#"}
-                Login
-            %br
-            %button{:href=>"#"}
-                Sign Up
+= render 'partials/nav'
 .banner
     .banner-overlay
     .b-content-container
@@ -59,16 +16,12 @@
             .img
 .coins
     .signups
-        %h5 Sign up for updates on SovaCrypto
-    .form
-        %form{:action => "#"}
-            %input{"type" => "text", "placeholder" => "Enter Email...", "size" => 20}
-            %input{"type" => "submit", "value" => "Submit" }
+        %h5 "The future of money is digital currency" - <em>Bill Gates</em>
 .time
     .sovacoin
     %h3 Coming Soon...
     #clock
-.price-section
+.price-section#about
     .content-box-one
         %h1 A simpler way to invest in cryptocurrencies
         %br
@@ -130,8 +83,6 @@
         %p 
             %span{:class => "struct"} Main ICO Period: 
             TBD
-            %a.btn.btn-outline-dark.btn-lg.jumbo-btn.linkcode{:href => "#", :role => "button"}
-                <i class="fa fa-cube"></i> Get Started
         %p 
         %span{:class => "ital"} Team tokens will vest over two years.
     %br
@@ -296,18 +247,4 @@
             %br
             %i.fas.fa-map-marker-alt.fa-lg.icon
             Panama City, Panama
-.topnav#footer
-    .topnav-elem
-        %i.far.fa-copyright.fa-lg.icon
-        %p 2018 SovaCrypto
-    .topnav-elem
-        %a{:href => "https://www.facebook.com/Sova-Crypto-2025423687741315/"}
-            %i.fab.fa-facebook-square.fa-lg.icon
-        %a{:href => "https://twitter.com/sovacrypto"}
-            %i.fab.fa-twitter-square.fa-lg.icon
-        %a{:href => "https://www.instagram.com/sovacrypto/"}
-            %i.fab.fa-instagram.fa-lg.icon
-        %a{:href => "https://www.linkedin.com/in/sova-crypto-724717158/"}
-            %i.fab.fa-linkedin.fa-lg.icon
-        %a{:href => "https://www.youtube.com/channel/UCcfUa0tQJwN7UILoMuX62-A"}
-            %i.fab.fa-youtube.fa-lg.icon
+= render 'partials/footer'
