@@ -21,24 +21,12 @@
         %span.navbar-toggler-icon
     #navbars-md-collapse.collapse.navbar-collapse
         %ul.navbar-nav.ml-auto
-            %li.nav-item.active
-                %a.nav-link{:href=>"/"}
-                    Home
-                    %span.sr-only
-                        (current)
+            -#
+                %li.nav-item.active
+                    %a.nav-link{:href=>"/"}
+                        Home
+                        %span.sr-only
+                            (current)
             %li.nav-item
                 %a.nav-link{:href=>"#about"}
-                    About
-            %li.nav-item
-                %a.nav-link{:href=>"#"}
-                    Blog
-            %li.nav-item
-                %a.nav-link{:href=>"/register"}
-                    Dashboard
-            %li.nav-item.dropdown
-            %br
-            %button{:type => "button", :class => "nav-btn"}
-                = link_to('Login', register_path)
-            %br
-            %button{:type => "button", :class => "nav-btn"}
-                = link_to('Register', register_path)
+                    About Us

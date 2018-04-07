@@ -101,7 +101,7 @@ $(document).ready(function() {
 
     // COUNTDOWN CLOCK
 
-    $('#clock').countdown('2018/4/15', function (event) {
+    $('#clock').countdown('2018/5/15', function (event) {
         var $this = $(this).html(event.strftime(''
             + '<div class="timing" style="display: inline-block"><span>%w</span> <br> wks <br> </div>'
             + '<div class="timing" style="display: inline-block"><span>%d</span> <br> days <br></div> '

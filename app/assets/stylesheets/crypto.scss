@@ -121,6 +121,7 @@ $clouds: #ECF0F1;
 
 
     li a {
+        color: $wine;
         @media screen and (max-width: 600px) {
             font-size: 1.3em;
         }
@@ -143,11 +144,6 @@ ul.navbar-nav .nav-btn {
     border-radius: 3px;
     background: $gold;
     letter-spacing: 2px;
-
-    a {
-        color: $navy;
-        text-decoration: none;
-    }
 }
 
 // BANNER 
@@ -209,6 +205,12 @@ ul.navbar-nav .nav-btn {
                 letter-spacing: 1px;
                 color: $white;
                 border-color: $gold;
+
+                a {
+                  color: $gold;
+                  text-decoration: none;
+                }
+
             }
         }
 
@@ -540,6 +542,11 @@ ul.navbar-nav .nav-btn {
                 li {
                     color: $gold;
                     text-align: left;
+
+                    a {
+                        color: $gold;
+                        text-decoration: none;
+                    }
                 }
             }
         }
