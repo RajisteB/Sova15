@@ -89,7 +89,7 @@ $clouds: #ECF0F1;
         margin-right: 50px;
 
         p {
-            color: $white;
+            color: $gold;
             margin: 0px 15px 0px 15px;
             font-weight: 300;
             font-size: .8em;
@@ -183,7 +183,7 @@ ul.navbar-nav .nav-btn {
         .b-content {
             padding: 20px;
             width: 30%;
-            color: $white;
+            color: $gold;
             position: relative;
             z-index: 2;
             background: $wine;
@@ -273,7 +273,7 @@ ul.navbar-nav .nav-btn {
     @include flex-center-center-around-col;
 
     h3 {
-        color: white;
+        color: $gold;
     }
     .sovacoin {
         height: 300px;
@@ -304,7 +304,7 @@ ul.navbar-nav .nav-btn {
     @include flex-center-center-around-col;
     width: 100%;
     background: $darknavy;
-    color: white;
+    color: $gold;
     padding: 15px;
 
     .git-heading {
@@ -469,10 +469,10 @@ ul.navbar-nav .nav-btn {
 }
 
 .card-header {
-    background: $wine;
+    background: rgba(230, 230, 230, 0.85);
 
     a {
-        color: $gold;
+        color: black;
     }
 
     .down-arrow {
@@ -520,7 +520,7 @@ ul.navbar-nav .nav-btn {
             @include bg-image-cover('SovaCrypto2.png');
         }
         p {
-            color: white;
+            color: $gold;
         }
     }
 
